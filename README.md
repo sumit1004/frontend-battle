@@ -17,7 +17,7 @@ This project focuses on replicating the given design accurately while adding sub
 
 ## 🔗 Live Link
 
- [Click here to view the live site]([(https://frontendbattleiitb.netlify.app/)])
+ [(https://frontendbattleiitb.netlify.app/)]
 
 ---
 
