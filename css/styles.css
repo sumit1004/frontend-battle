@@ -1,0 +1,156 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    height: 100vh;
+    font-family: 'Courier New', monospace;
+}
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar {
+    width: 200px;
+    height: 30px;
+    background: #333;
+    position: relative;
+    overflow: visible;
+    perspective: 1000px;
+    transition: all 0.5s ease, transform 1.5s ease-in-out;
+}
+
+.progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    background: #fff;
+    transition: width 0.1s linear, transform 0.5s ease;
+    transform-origin: right center;
+}
+
+.progress.split {
+    width: 70% !important;
+    animation: verticalSplit 0.8s ease forwards;
+}
+
+@keyframes verticalSplit {
+    0% {
+        transform: rotate(0deg) translateX(0);
+    }
+    100% {
+        transform: rotate(90deg) translateX(-15px);/*usted for split effect */
+    }
+}
+
+.progress-split {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    width: 30%;
+    height: 100%;
+    background: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(20px); 
+    transition: transform 1s ease-in-out, opacity 0.3s ease, visibility 0.3s;
+}
+
+.progress-split.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.progress-split.zoom {
+    transform: scale(50);
+    background: #fff;
+}
+
+.counter {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    color: #fff;
+    font-size: 50px;
+}
+
+.loader-container.loaded .progress-bar,
+.loader-container.loaded .counter {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+}
+
+.progress-bar.hide-bg {
+    background: transparent;
+}
+.progress-bar.hide-bg {
+    background: transparent;
+}
+
+.progress-bar.zoom-active {
+    transform: scaleY(1.2);
+    background: #fff;
+}
+
+.counter.zoom-active {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.home-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: 2rem;
+    flex-direction: column;
+    text-align: center;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+    color: #fff;
+}
+
+.home-header {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+.home-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background: #fff;
+    color: #000;
+}
+
+.home-content.show {
+    display: flex;
+}
+

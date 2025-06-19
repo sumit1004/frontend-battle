@@ -1,0 +1,65 @@
+/* Mobile-First Styles */
+.logo-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: auto;
+    padding: 1rem;
+}
+
+.logo-item {
+        width: 75%;
+    transform: none !important;
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+.logo-item:nth-child(1) { animation-delay: 0.1s; }
+.logo-item:nth-child(2) { animation-delay: 0.2s; }
+.logo-item:nth-child(3) { animation-delay: 0.3s; }
+.logo-item:nth-child(4) { animation-delay: 0.4s; }
+.logo-item:nth-child(5) { animation-delay: 0.5s; }
+.logo-item:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Navigation Dots */
+.nav-dots {
+    gap: 0.5rem;
+}
+
+.nav-dot {
+    width: 8px;
+    height: 8px;
+}
+
+/* Mobile Card Styles */
+.plan-card,
+.carbon-card,
+.testimonial-content {
+    padding: 1.5rem;
+}
+
+/* Mobile Footer */
+.footer-content {
+    padding: 2rem 1rem;
+}
+
+.newsletter-form {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.newsletter-form input,
+.newsletter-form button {
+    width: 100%;
+}
